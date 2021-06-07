@@ -12,8 +12,8 @@ class Jogo : public virtual Item{
         string plataforma;
     public:
         void ler();
-	    virtual string getClasse();
-        virtual double aluguel();
+	    string getClasse();
+        double aluguel();
         int getJogadores();
         string getPlataforma();
 };

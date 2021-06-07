@@ -2,7 +2,7 @@
 #include <string>
 #include "IAlugavel.h"
 #include "Locadora.h"
-#include "item.h"
+#include "Item.h"
 #include "Jogo.h"
 #include "Filme.h"
 

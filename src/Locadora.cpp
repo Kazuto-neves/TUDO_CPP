@@ -7,8 +7,6 @@
 #include "Jogo.h"
 #include "Filme.h"
 
-//#include "IAlugavelTipo3.h"
-
 using namespace std;
  
 Locadora::Locadora(){qtd = 0;}
