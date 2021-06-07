@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
-#include "Item.h"
+#include "IAlugavel.h"
 #include "Locadora.h"
-//#include "ItemTipo1.h"
+#include "item.h"
 #include "Jogo.h"
 #include "Filme.h"
 
 using namespace std;
 
-Item* criarItem(){
+IAlugavel* criarIAlugavel(){
     int opc;
     do{
         cout << "1 - Jogo" << endl;
@@ -43,19 +43,19 @@ int menu(){
 }
 
 int main(){
-    Item* d;
+    IAlugavel* d;
     Locadora h;
     bool fim = false;
     int buscar;
     while (!fim){
         switch (menu()){
         case 1:
-            d = criarItem();
+            d = criarIAlugavel();
             d->ler();
             h.inserir(d);
             cout << "Inserida com sucesso!" << endl; break;
         case 2:
-            cout << "Digite o codigo da Item a ser removida: ";
+            cout << "Digite o codigo da IAlugavel a ser removida: ";
             cin >> buscar;
             if(h.existe(buscar)){
                 h.remover(buscar);
@@ -63,7 +63,7 @@ int main(){
             }else
                 cout << "Nao encontrada!" << endl; break;
         case 3:
-            cout << "Digite o codigo da Item a ser alterada: ";
+            cout << "Digite o codigo da IAlugavel a ser alterada: ";
             cin >> buscar;
             if(h.existe(buscar)){
                 d->ler();

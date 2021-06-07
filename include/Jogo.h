@@ -1,7 +1,7 @@
 #ifndef _JOGO_H_
 #define _JOGO_H_
 
-#include "item.h"
+#include "Item.h"
 #include <string>
 
 using namespace std;

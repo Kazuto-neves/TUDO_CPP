@@ -13,8 +13,6 @@ class Item : public IAlugavel{
         virtual void ler();
         virtual double aluguel() = 0;
         virtual string getClasse();
-        virtual void remover(int i);
-        virtual void alterar(int i);
         string getTitulo();
         string getEstilo();
         string getProdutora();
