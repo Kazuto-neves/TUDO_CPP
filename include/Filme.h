@@ -7,11 +7,11 @@
 using namespace std;
 
 class Filme : public virtual Item {
-    protected:
+    private:
         string ator,diretor;
     public:
         void ler();
-	virtual string getClasse();
+	    virtual string getClasse();
         virtual double aluguel();
         string getAtor();
         string getDiretor();

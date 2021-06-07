@@ -7,14 +7,14 @@
 using namespace std;
 
 class Jogo : public virtual Item{
-    protected:
-        int n_jogadores;
+    private:
+        int jogadores;
         string plataforma;
     public:
         void ler();
-	virtual string getClasse();
+	    virtual string getClasse();
         virtual double aluguel();
-        int getN_Jogadores();
+        int getJogadores();
         string getPlataforma();
 };
 
