@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "IAlugavel.h"
+#include "Item.h"
 #include "Jogo.h"
 #include "Filme.h"
 
@@ -16,7 +16,7 @@ Locadora::~Locadora(){
 }
 
 
-void Locadora::inserir(IAlugavel* d){
+void Locadora::inserir(Item* d){
     v[qtd] = d;
     qtd++;
 }
@@ -40,7 +40,7 @@ void Locadora::remover(int busca){
     qtd--;
 }
 
-void Locadora::alterar(IAlugavel* d, int busca){
+void Locadora::alterar(Item* d, int busca){
     int pos = obterIndice(busca);
     delete v[pos];
     v[pos] = d;

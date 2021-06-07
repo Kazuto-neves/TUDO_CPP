@@ -1,7 +1,7 @@
 #ifndef _LOCADORA_H_
 #define _LOCADORA_H_
 
-#include"IAlugavel.h"
+#include"Item.h"
 
 class Locadora {
     private:

@@ -16,6 +16,7 @@ class Jogo : public virtual Item{
         double aluguel();
         int getJogadores();
         string getPlataforma();
+        void mostrar();
 };
 
 #endif

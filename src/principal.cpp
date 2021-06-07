@@ -70,11 +70,12 @@ int main(){
                 h.alterar(d, buscar);
                 cout << "Alterada com sucesso!" << endl;
             }else
-                cout << "Nao encontrada!" << endl; break;
+                cout << "Nao encontrada!" << endl;break;
         /*case 4:
             h.listar();
             system("pause"); break;*/
         case 5:
+            string n;
             cout << "Digite a plataforma: "; cin >> n;
             h.jogosplataforma(n);                                          
             system("pause"); break;
@@ -84,7 +85,7 @@ int main(){
             << "2 para Filmes" << endl
             << "Digite: ";  cin >> x;
             cout << endl;
-            cout << "digite o codigo: " << cin >> y;
+            cout << "digite o codigo: ";    cin >> y;
             h.MostrarAluguel(y,x); 
             system("pause"); break;
         case 7:

@@ -5,13 +5,13 @@
 
 using namespace std;
 
-string Item::getClasse(){return "Item"};
-string Item::getTitulo(){return Titulo};
-string Item::getEstilo(){return estilo};
-string Item::getProdutora(){return Produtora};
-string Item::getMidia(){return Midia};
-int Item::getCodigo(){return codigo};
-int Item::getAno(){return ano};
+string Item::getClasse(){return "Item";}
+string Item::getTitulo(){return Titulo;}
+string Item::getEstilo(){return estilo;}
+string Item::getProdutora(){return Produtora;}
+string Item::getMidia(){return Midia;}
+int Item::getCodigo(){return codigo;}
+int Item::getAno(){return ano;}
 
 void Item::ler(){
     cout << "Codigo: "; cin >> codigo;

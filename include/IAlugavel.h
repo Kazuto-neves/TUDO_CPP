@@ -13,8 +13,11 @@ class IAlugavel{
         virtual string getEstilo()         = 0;
         virtual string getProdutora()      = 0;
         virtual string getMidia()          = 0;
-        virtual int getAno()               = 0;  
-        virtual double aluguel()           = 0; 
+        virtual int getAno()               = 0;
+        //virtual int getJogadores()         = 0;
+        //virtual string getPlataforma()     = 0;
+        virtual double aluguel()           = 0;
+        virtual void mostrar()             = 0;
 };
 
 #endif
