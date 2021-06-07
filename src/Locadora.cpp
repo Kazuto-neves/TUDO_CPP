@@ -59,10 +59,10 @@ void Locadora::alterar(IAlugavel* d, int busca){
     }
 }*/
 
-void Locadora::jogosplataforma(){
+void Locadora::jogosplataforma(string n){
     cout << "Cod. Titulo " << setfill(' ') << setw(20) << right << "Estilo" << setfill(' ') << setw(10) << "Produtora" << setfill(' ') << setw(10) << "Midia" << setfill(' ') << setw(10) << "Ano   Aluguel" << endl;
     for (int i = 0; i < qtd; i++)
-	if (v[i]->getClasse()=="Jogo"){
+	if (v[i]->getClasse()=="Jogo" && v[i]->getPlataforma() == n){
             cout << setprecision(2) << fixed;
             cout << setfill('0') << setw(4) << right << v[i]->getCodigo()    << " ";
             cout << setfill(' ') << setw(5) << left << v[i]->getTitulo()     << " ";
@@ -73,9 +73,9 @@ void Locadora::jogosplataforma(){
         }
 }
 
-void Locadora::MostrarAluguel(int i, bool x){
+void Locadora::MostrarAluguel(int i, int x){
     cout << "Cod. Titulo " << setfill(' ') << setw(20) << right << "Estilo" << setfill(' ') << setw(10) << "Produtora" << setfill(' ') << setw(10) << "Midia" << setfill(' ') << setw(10) << "Ano   Aluguel" << endl;
-    if (x == true){
+    if (x == 1){
         if (v[i]->getClasse()=="Jogo"){
             cout << setprecision(2) << fixed;
             cout << setfill('0') << setw(4) << right << v[i]->getCodigo()    << " ";
@@ -84,7 +84,7 @@ void Locadora::MostrarAluguel(int i, bool x){
             cout << setfill(' ') << setw(5) << left << v[i]->getProdutora()  << " ";
             cout << setfill(' ') << setw(5) << left << v[i]->getMidia()      << " ";
             cout << setfill(' ') << setw(5) << left << v[i]->getAno()        << " ";
-            cout << setfill('0') << setw(4) << right << v[i]->Aluguel()      << " ";
+            cout << setfill('0') << setw(4) << right << v[i]->aluguel()      << " ";
         }
     }else{
         if (v[i]->getClasse()=="Filme"){
@@ -95,7 +95,7 @@ void Locadora::MostrarAluguel(int i, bool x){
             cout << setfill(' ') << setw(5) << left << v[i]->getProdutora()  << " ";
             cout << setfill(' ') << setw(5) << left << v[i]->getMidia()      << " ";
             cout << setfill(' ') << setw(5) << left << v[i]->getAno()        << " ";
-            cout << setfill('0') << setw(4) << right << v[i]->Aluguel()      << " ";
+            cout << setfill('0') << setw(4) << right << v[i]->aluguel()      << " ";
         }
     }
 }

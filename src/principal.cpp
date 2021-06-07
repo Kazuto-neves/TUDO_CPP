@@ -71,14 +71,21 @@ int main(){
                 cout << "Alterada com sucesso!" << endl;
             }else
                 cout << "Nao encontrada!" << endl; break;
-        case 4:
+        /*case 4:
             h.listar();
-            system("pause"); break;
+            system("pause"); break;*/
         case 5:
-            h.listartp2();                                          
+            cout << "Digite a plataforma: "; cin >> n;
+            h.jogosplataforma(n);                                          
             system("pause"); break;
         case 6:
-            h.listartp3nota(); 
+            int x,y;
+            cout << "1 Para Jogo" << endl
+            << "2 para Filmes" << endl
+            << "Digite: ";  cin >> x;
+            cout << endl;
+            cout << "digite o codigo: " << cin >> y;
+            h.MostrarAluguel(y,x); 
             system("pause"); break;
         case 7:
             fim = true; break;
