@@ -8,7 +8,7 @@
 
 using namespace std;
 
-IAlugavel* criarIAlugavel(){
+IAlugavel* criarAluguel(){
     int opc;
     do{
         cout << "1 - Jogo" << endl;
@@ -50,7 +50,7 @@ int main(){
     while (!fim){
         switch (menu()){
         case 1:
-            d = criarIAlugavel();
+            d = criarAluguel();
             d->ler();
             h.inserir(d);
             cout << "Inserida com sucesso!" << endl; break;

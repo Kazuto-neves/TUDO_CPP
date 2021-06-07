@@ -9,5 +9,7 @@ void Filme::ler(){
     cout << "Diretor: "; getline(cin, diretor);
 }
 
-string Filme::getClasse(){return "Filme"};
-double Filme::aluguel(){return getAno() <2020?5:7};
+string Filme::getClasse(){return "Filme";}
+string Filme::getAtor(){return "ator";}
+string Filme::getDiretor(){return "diretor";}
+double Filme::aluguel(){return getAno() <2020?5:7;}

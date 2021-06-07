@@ -1,5 +1,5 @@
 # Name of the project
-PROJ_NAME=dist/Historico.exe
+PROJ_NAME=dist/Locadora.exe
 
 # Compiler
 CC=@ gcc

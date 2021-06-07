@@ -1,4 +1,4 @@
-#include"DisciplinaTipo1.h"
+#include"Jogo.h"
 #include <iostream>
 #include <string>
 
@@ -11,6 +11,9 @@ void Jogo::ler(){
     cout << "Plataforma: "; cin.ignore();   getline(cin, plataforma);
 }
 string Jogo::getClasse(){ return "Jogo";}
+int Jogo::getN_Jogadores(){return "n_jogadores";}
+string Jogo::getPlataforma(){return "plataforma";}
 double Jogo::aluguel(){
-    if()
+    if(plataforma=="xbox series" || plataforma=="ps5" || plataforma=="nintendo switch" )return getAno() <2020?1*7:1*12;
+    else return getAno() <2020?0.6*7:0.6*12;
 }
