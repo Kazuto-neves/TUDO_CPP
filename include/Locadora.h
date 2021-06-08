@@ -18,7 +18,7 @@ class Locadora {
         void mostrarp(string n);
         void listar();
         void jogosplataforma(string n);
-        void MostrarAluguel(int i, int x);
+        void MostrarAluguel(int busca);
 };
 
 #endif

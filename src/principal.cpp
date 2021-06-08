@@ -56,7 +56,7 @@ int main(){
             h.inserir(d);
             cout << "Inserida com sucesso!" << endl; break;
         case 2:
-            cout << "Digite o codigo da IAlugavel a ser removida: ";
+            cout << "Digite o codigo da Item a ser removida: ";
             cin >> buscar;
             if(h.existe(buscar)){
                 h.remover(buscar);
@@ -64,7 +64,7 @@ int main(){
             }else
                 cout << "Nao encontrada!" << endl; break;
         case 3:
-            cout << "Digite o codigo da IAlugavel a ser alterada: ";
+            cout << "Digite o codigo da Item a ser alterada: ";
             cin >> buscar;
             if(h.existe(buscar)){
                 d->ler();
@@ -81,12 +81,8 @@ int main(){
             h.jogosplataforma(n);                                          
             system("pause"); break;
         case 6:
-            cout << "1 Para Jogo" << endl
-            << "2 para Filmes" << endl
-            << "Digite: ";  cin >> x;
-            cout << endl;
             cout << "digite o codigo: ";    cin >> buscar;
-            h.MostrarAluguel(buscar,x); 
+            h.MostrarAluguel(buscar); 
             system("pause"); break;
         case 7:
             fim = true; break;

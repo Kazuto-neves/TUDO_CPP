@@ -12,6 +12,7 @@ string Item::getEstilo(){return estilo;}
 string Item::getProdutora(){return Produtora;}
 string Item::getMidia(){return Midia;}
 int Item::getAno(){return ano;}
+string Item:: getPlataforma(){return plataforma;}
 
 void Item::ler(){
     cout << "Codigo: "; cin >> codigo;

@@ -8,6 +8,7 @@ using namespace std;
 
 void Filme::ler(){
     Item::ler();
+    cin.ignore();
     cout << "Ator Principal: "; getline(cin, ator);
     cout << "Diretor: "; getline(cin, diretor);
 }

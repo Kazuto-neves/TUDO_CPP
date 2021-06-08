@@ -1,5 +1,5 @@
-#ifndef _JOGO_H_
-#define _JOGO_H_
+#ifndef JOGO_H
+#define JOGO_H
 
 #include "Item.h"
 #include <string>
@@ -15,7 +15,7 @@ class Jogo : public virtual Item{
 	    string getClasse();
         double aluguel();
         int getJogadores();
-        string getPlataforma();
+        
         void mostrar();
 };
 

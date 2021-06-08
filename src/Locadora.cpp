@@ -67,42 +67,14 @@ void Locadora::listar(){
 }
 
 void Locadora::jogosplataforma(string n){
-    cout << "Cod. Titulo " << setfill(' ') << setw(20) << right << "Estilo" << setfill(' ') << setw(10) << "Produtora" << setfill(' ') << setw(10) << "Midia" << setfill(' ') << setw(10) << "Ano   Aluguel" << endl;
-    for (int i = 0; i < qtd; i++)
-	if (v[i]->getClasse()=="Jogo" && v[i]->getPlataforma() == n){
-            cout << setprecision(2) << fixed;
-            cout << setfill('0') << setw(4) << right << v[i]->getCodigo()    << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getTitulo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getEstilo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getProdutora()  << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getMidia()      << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getAno()        << " ";
-        }
+    int jf=0;
+    for (int i = 0; i < qtd; i++){
+        jf = v[i]->getPlataforma().find(n);
+        if (jf > -1 ) listar();
+    }
 }
 
-void Locadora::MostrarAluguel(int i, int x){
-    cout << "Cod. Titulo " << setfill(' ') << setw(20) << right << "Estilo" << setfill(' ') << setw(10) << "Produtora" << setfill(' ') << setw(10) << "Midia" << setfill(' ') << setw(10) << "Ano   Aluguel" << endl;
-    if (x == 1){
-        if (v[i]->getClasse()=="Jogo"){
-            cout << setprecision(2) << fixed;
-            cout << setfill('0') << setw(4) << right << v[i]->getCodigo()    << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getTitulo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getEstilo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getProdutora()  << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getMidia()      << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getAno()        << " ";
-            cout << setfill('0') << setw(4) << right << v[i]->aluguel()      << " ";
-        }
-    }else{
-        if (v[i]->getClasse()=="Filme"){
-            cout << setprecision(2) << fixed;
-            cout << setfill('0') << setw(4) << right << v[i]->getCodigo()    << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getTitulo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getEstilo()     << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getProdutora()  << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getMidia()      << " ";
-            cout << setfill(' ') << setw(5) << left << v[i]->getAno()        << " ";
-            cout << setfill('0') << setw(4) << right << v[i]->aluguel()      << " ";
-        }
-    }
+void Locadora::MostrarAluguel(int busca){
+    int pos = obterIndice(busca);
+    if(pos>-1)v[pos]->mostrar();
 }

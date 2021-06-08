@@ -14,7 +14,7 @@ void Jogo::ler(){
 
 string Jogo::getClasse(){ return "Jogo";}
 int Jogo::getJogadores(){return jogadores;}
-string Jogo::getPlataforma(){return plataforma;}
+//string Jogo::getPlataforma(){return plataforma;}
 
 double Jogo::aluguel(){
     if(plataforma=="xbox series" || plataforma=="ps5" || plataforma=="nintendo switch" )return getAno() <2020?1*7:1*12;
@@ -22,7 +22,7 @@ double Jogo::aluguel(){
 }
 
 void Jogo::mostrar(){
-    cout<<"_______JOGOS__________"<<endl;
+    cout<<"__JOGOS___"<<endl;
     cout<<"Nome:"<<getTitulo()<< setfill('0') << setw(4)<<" cod. "<<getCodigo()<<endl;
     cout<<"produtora:"<<getProdutora()<<setfill(' ') << setw(30) << right<<"  Ano:   "<<getAno()<<endl;
     cout<<"Genero: "<<getEstilo()<<setfill(' ') << setw(30) << right<<"  Plataforma: "<<getPlataforma()<<endl;
