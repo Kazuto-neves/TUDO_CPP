@@ -15,7 +15,8 @@ class Locadora {
         void inserir(IAlugavel* d);
         void remover(int busca);
         void alterar(IAlugavel* d, int busca);
-        //void listar();
+        void mostrarp(string n);
+        void listar();
         void jogosplataforma(string n);
         void MostrarAluguel(int i, int x);
 };

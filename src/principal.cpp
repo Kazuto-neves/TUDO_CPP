@@ -46,7 +46,8 @@ int main(){
     IAlugavel* d;
     Locadora h;
     bool fim = false;
-    int buscar;
+    string n;
+    int buscar,x;
     while (!fim){
         switch (menu()){
         case 1:
@@ -71,22 +72,21 @@ int main(){
                 cout << "Alterada com sucesso!" << endl;
             }else
                 cout << "Nao encontrada!" << endl;break;
-        /*case 4:
-            h.listar();
-            system("pause"); break;*/
+        case 4:
+            cout<<"insira( nome/titulo, genero, jogo/filme, midia ou ano ): ";  cin >> n;
+            h.mostrarp(n);
+            system("pause"); break;
         case 5:
-            string n;
             cout << "Digite a plataforma: "; cin >> n;
             h.jogosplataforma(n);                                          
             system("pause"); break;
         case 6:
-            int x,y;
             cout << "1 Para Jogo" << endl
             << "2 para Filmes" << endl
             << "Digite: ";  cin >> x;
             cout << endl;
-            cout << "digite o codigo: ";    cin >> y;
-            h.MostrarAluguel(y,x); 
+            cout << "digite o codigo: ";    cin >> buscar;
+            h.MostrarAluguel(buscar,x); 
             system("pause"); break;
         case 7:
             fim = true; break;

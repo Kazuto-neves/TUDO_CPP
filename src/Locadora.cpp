@@ -16,7 +16,7 @@ Locadora::~Locadora(){
 }
 
 
-void Locadora::inserir(Item* d){
+void Locadora::inserir(IAlugavel* d){
     v[qtd] = d;
     qtd++;
 }
@@ -40,22 +40,31 @@ void Locadora::remover(int busca){
     qtd--;
 }
 
-void Locadora::alterar(Item* d, int busca){
+void Locadora::alterar(IAlugavel* d, int busca){
     int pos = obterIndice(busca);
     delete v[pos];
     v[pos] = d;
 }
 
-/*void Locadora::listar(){
-    cout << "Cod. Nome " << setfill(' ') << setw(63) << right << "Cred  Ano/S Media" << endl;
-    for (int i = 0; i < qtd; i++){
-        cout << setprecision(2) << fixed;
-        cout << setfill('0') << setw(4) << right << v[i]->getCodigo() << " ";
-        cout << setfill(' ') << setw(54) << left << v[i]->getNome();
-        cout << right << v[i]->getCreditos() << " " << right << v[i]->getAno() << "/" << v[i]->getSemestre() << " ";
-        cout << setfill('0') << setw(5) << v[i]->media() << endl;
+void Locadora::mostrarp(string n){
+    int i, nom = 0, mid = 0,gen=0,jf=0,ano=0;
+    string p;
+    for(i = 0; i<qtd; i++){
+        p=v[i]->getAno();
+        if(p==n)ano=1;
+        nom = v[i]->getTitulo().find(n);
+        mid = v[i]->getMidia().find(n);
+        gen = v[i]->getEstilo().find(n);
+        jf  = v[i]->getClasse().find(n);
+        if (nom > -1 || mid > -1 ||gen >-1 ||jf > -1 || ano > -1) listar();
     }
-}*/
+}
+
+void Locadora::listar(){
+    cout<<endl<<endl;
+    for (int i = 0; i < qtd; i++){v[i]->mostrar();}
+    cout<<endl<<endl;
+}
 
 void Locadora::jogosplataforma(string n){
     cout << "Cod. Titulo " << setfill(' ') << setw(20) << right << "Estilo" << setfill(' ') << setw(10) << "Produtora" << setfill(' ') << setw(10) << "Midia" << setfill(' ') << setw(10) << "Ano   Aluguel" << endl;

@@ -6,13 +6,16 @@
 
 using namespace std;
 
-class Filme : public Item {
+class Filme : public virtual Item {
     private:
         string ator,diretor;
     public:
         void ler();
-	virtual string getClasse();
-        virtual double aluguel();
+	    string getClasse();
+        string getAtor();
+        string getDiretor();
+        double aluguel();
+        void mostrar();
 };
 
 #endif

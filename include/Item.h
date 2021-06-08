@@ -19,7 +19,7 @@ class Item : public IAlugavel{
         string getProdutora();
         string getMidia();
         int getAno();
-        virtual void mostrar();
+        virtual void mostrar()   =0;
 };
 
 #endif
