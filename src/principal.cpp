@@ -26,20 +26,24 @@ IAlugavel* criarAluguel(){
 }
 
 int menu(){
-    int opc;
+    int opc=0;
     do{
+        cout<<"_____locadora ________"<<endl;
         cout << "1. inserir" << endl
-             << "2. remover pelo codigo" << endl
-             << "3. alterar dados dado o codigo" << endl
-             << "4. listar os itens onde eh dada uma parte da informacao" << endl
-             << "5. listar os jogos de uma plataforma" << endl
-             << "6. mostrar o valor do aluguel dado o codigo" << endl
-             << "7. Sair" << endl
+             << "2. remover por codigo" << endl
+             << "3. alterar por codigo"<<endl
+             << "4. listar tudo"<<endl
+             << "5. busca"<<endl
+             << "6. mostrar pelo valor"<<endl
+             << "7. listar jogos pela plataforma"<<endl
+             << "8. Sair" << endl
+             <<"_______________"<<endl
              << "Escolha uma opcao: ";
         cin >> opc;
-    } while (opc < 1 || opc > 7);
+    }while (opc < 1 || opc > 8);
 
     return opc;
+
 }
 
 int main(){
@@ -73,18 +77,21 @@ int main(){
             }else
                 cout << "Nao encontrada!" << endl;break;
         case 4:
+            h.listar();
+            break;
+        case 5:
             cout<<"insira( nome/titulo, genero, jogo/filme, midia ou ano ): ";  cin >> n;
             h.mostrarp(n);
-            system("pause"); break;
-        case 5:
-            cout << "Digite a plataforma: "; cin >> n;
-            h.jogosplataforma(n);                                          
             system("pause"); break;
         case 6:
             cout << "digite o codigo: ";    cin >> buscar;
             h.MostrarAluguel(buscar); 
             system("pause"); break;
         case 7:
+            cout << "Digite a plataforma: "; cin >> n;
+            h.jogosplataforma(n);                                          
+            system("pause"); break;
+        case 8:
             fim = true; break;
         default:
             cout << "Opcao invalida!" << endl; break;

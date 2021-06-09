@@ -76,5 +76,5 @@ void Locadora::jogosplataforma(string n){
 
 void Locadora::MostrarAluguel(int busca){
     int pos = obterIndice(busca);
-    if(pos>-1)v[pos]->mostrar();
+    pos>-1?cout<<"preco: "<<v[pos]->aluguel()<<endl:cout<<"Nao foi possivel encontrar"<<endl;
 }
