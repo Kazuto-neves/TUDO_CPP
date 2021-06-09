@@ -47,30 +47,25 @@ void Locadora::alterar(IAlugavel* d, int busca){
 }
 
 void Locadora::mostrarp(string n){
-    int i, nom = 0, mid = 0,gen=0,jf=0,ano=0;
-    string p;
-    for(i = 0; i<qtd; i++){
-        p=v[i]->getAno();
-        if(p==n)ano=1;
-        nom = v[i]->getTitulo().find(n);
-        mid = v[i]->getMidia().find(n);
-        gen = v[i]->getEstilo().find(n);
-        jf  = v[i]->getClasse().find(n);
-        if (nom > -1 || mid > -1 ||gen >-1 ||jf > -1 || ano > -1) listar();
+    for ( int i = 0 ; i < qtd ; i++ ){
+        if ( v[i]->getTitulo().find(n) != string::npos || v[i]->getProdutora().find(n) != string::npos ||
+            v[i]->getMidia().find(n) != string::npos || v[i]->getEstilo().find(n) != string::npos)
+                v[i]->mostrar();
+        else if ( v[i]->getClasse() == "Filme" ){
+            if (((Filme*)v[i])->getAtor().find(n) != string::npos || ((Filme*)v[i])->getDiretor().find(n) != string::npos )
+                v[i]->mostrar();
+        }
+        else if ( v[i]->getClasse() == "Jogo" ){
+            if ( ((Jogo*)v[i])->getPlataforma().find(n) != string::npos )
+                v[i]->mostrar();
+        }
     }
 }
 
-void Locadora::listar(){
-    cout<<endl<<endl;
-    for (int i = 0; i < qtd; i++){v[i]->mostrar();}
-    cout<<endl<<endl;
-}
-
 void Locadora::jogosplataforma(string n){
-    int jf=0;
-    for (int i = 0; i < qtd; i++){
-        jf = v[i]->getPlataforma().find(n);
-        if (jf > -1 ) listar();
+        for ( int i = 0 ; i < qtd ; i++ ){
+        if ( v[i]->getClasse() == "Jogo" )
+            if ( ((Jogo*)v[i])->getPlataforma() == n )v[i]->mostrar();
     }
 }
 

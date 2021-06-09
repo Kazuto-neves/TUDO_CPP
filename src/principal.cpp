@@ -32,15 +32,14 @@ int menu(){
         cout << "1. inserir" << endl
              << "2. remover por codigo" << endl
              << "3. alterar por codigo"<<endl
-             << "4. listar tudo"<<endl
-             << "5. busca"<<endl
-             << "6. mostrar pelo valor"<<endl
-             << "7. listar jogos pela plataforma"<<endl
-             << "8. Sair" << endl
+             << "4. busca"<<endl
+             << "5. mostrar pelo valor"<<endl
+             << "6. listar jogos pela plataforma"<<endl
+             << "7. Sair" << endl
              <<"_______________"<<endl
              << "Escolha uma opcao: ";
         cin >> opc;
-    }while (opc < 1 || opc > 8);
+    }while (opc < 1 || opc > 7);
 
     return opc;
 
@@ -77,21 +76,18 @@ int main(){
             }else
                 cout << "Nao encontrada!" << endl;break;
         case 4:
-            h.listar();
-            break;
-        case 5:
             cout<<"insira( nome/titulo, genero, jogo/filme, midia ou ano ): ";  cin >> n;
             h.mostrarp(n);
             system("pause"); break;
-        case 6:
+        case 5:
             cout << "digite o codigo: ";    cin >> buscar;
             h.MostrarAluguel(buscar); 
             system("pause"); break;
-        case 7:
+        case 6:
             cout << "Digite a plataforma: "; cin >> n;
             h.jogosplataforma(n);                                          
             system("pause"); break;
-        case 8:
+        case 7:
             fim = true; break;
         default:
             cout << "Opcao invalida!" << endl; break;

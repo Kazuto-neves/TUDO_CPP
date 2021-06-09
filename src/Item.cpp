@@ -12,7 +12,6 @@ string Item::getEstilo(){return estilo;}
 string Item::getProdutora(){return Produtora;}
 string Item::getMidia(){return Midia;}
 int Item::getAno(){return ano;}
-string Item:: getPlataforma(){return plataforma;}
 
 void Item::ler(){
     cout << "Codigo: "; cin >> codigo;
@@ -21,4 +20,10 @@ void Item::ler(){
     cout << "Produtora: ";   getline(cin, Produtora);
     cout << "Midia: ";   getline(cin, Midia);
     cout << "Ano de Lacamento: ";   cin >> ano;
+}
+
+void Item::mostrar(){
+    cout << "Codigo -> " << getCodigo() << " Nome -> " << getTitulo() << endl;
+    cout << "Tipo -> " << getClasse() << " Midia -> " << getMidia() << endl;
+    cout << "Ano -> " << getAno() << " Alugel -> " << aluguel() << endl;
 }

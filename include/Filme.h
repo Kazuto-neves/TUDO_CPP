@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Filme : public virtual Item {
+class Filme : public Item {
     private:
         string ator,diretor;
     public:
@@ -15,7 +15,6 @@ class Filme : public virtual Item {
         string getAtor();
         string getDiretor();
         double aluguel();
-        void mostrar();
 };
 
 #endif

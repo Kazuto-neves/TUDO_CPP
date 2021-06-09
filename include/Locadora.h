@@ -10,7 +10,7 @@ class Locadora {
         int obterIndice(int busca);
     public:
         Locadora();
-        virtual ~Locadora();
+        ~Locadora();
         bool existe(int busca);
         void inserir(IAlugavel* d);
         void remover(int busca);

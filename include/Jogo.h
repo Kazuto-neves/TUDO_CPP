@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Jogo : public virtual Item{
+class Jogo : public Item{
     private:
         int jogadores;
         string plataforma;
@@ -15,8 +15,7 @@ class Jogo : public virtual Item{
 	    string getClasse();
         double aluguel();
         int getJogadores();
-        
-        void mostrar();
+        string getPlataforma();
 };
 
 #endif
