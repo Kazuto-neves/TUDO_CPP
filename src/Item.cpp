@@ -1,6 +1,7 @@
 #include"Item.h"
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 using namespace std;
@@ -23,7 +24,10 @@ void Item::ler(){
 }
 
 void Item::mostrar(){
-    cout << "Codigo -> " << getCodigo() << " Nome -> " << getTitulo() << endl;
-    cout << "Tipo -> " << getClasse() << " Midia -> " << getMidia() << endl;
-    cout << "Ano -> " << getAno() << " Alugel -> " << aluguel() << endl;
+    cout << setfill('0') << setw(4) << right << getCodigo() << " ";
+    cout << setfill(' ') << setw(20) << left << getTitulo();
+    cout << setfill(' ') << setw(19) << left << getClasse();
+    cout << setfill(' ') << setw(15) << left << getMidia();
+    cout << setfill(' ') << setw(5) << left << getAno() << " ";
+    cout << setfill('0') << setw(4) << aluguel() << endl;
 }

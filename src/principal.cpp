@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include "IAlugavel.h"
 #include "Locadora.h"
@@ -77,6 +78,7 @@ int main(){
                 cout << "Nao encontrada!" << endl;break;
         case 4:
             cout<<"insira( nome/titulo, genero, jogo/filme, midia ou ano ): ";  cin >> n;
+            cout << endl << "Cod. Nome " << setfill(' ') << setw(20) << right << " Tipo " << setfill(' ') << setw(20) << right << " midia " << setfill(' ') << setw(20) << right << "Ano  Aluguel" << endl;
             h.mostrarp(n);
             system("pause"); break;
         case 5:
@@ -85,6 +87,7 @@ int main(){
             system("pause"); break;
         case 6:
             cout << "Digite a plataforma: "; cin >> n;
+            cout << endl << "Cod. Nome " << setfill(' ') << setw(20) << right << " Tipo " << setfill(' ') << setw(20) << right << " midia " << setfill(' ') << setw(20) << right << "Ano  Aluguel" << endl;
             h.jogosplataforma(n);                                          
             system("pause"); break;
         case 7:

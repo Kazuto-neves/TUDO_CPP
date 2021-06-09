@@ -49,15 +49,12 @@ void Locadora::alterar(IAlugavel* d, int busca){
 void Locadora::mostrarp(string n){
     for ( int i = 0 ; i < qtd ; i++ ){
         if ( v[i]->getTitulo().find(n) != string::npos || v[i]->getProdutora().find(n) != string::npos ||
-            v[i]->getMidia().find(n) != string::npos || v[i]->getEstilo().find(n) != string::npos)
-                v[i]->mostrar();
+            v[i]->getMidia().find(n) != string::npos || v[i]->getEstilo().find(n) != string::npos)v[i]->mostrar();
         else if ( v[i]->getClasse() == "Filme" ){
-            if (((Filme*)v[i])->getAtor().find(n) != string::npos || ((Filme*)v[i])->getDiretor().find(n) != string::npos )
-                v[i]->mostrar();
+            if (((Filme*)v[i])->getAtor().find(n) != string::npos || ((Filme*)v[i])->getDiretor().find(n) != string::npos )v[i]->mostrar();
         }
         else if ( v[i]->getClasse() == "Jogo" ){
-            if ( ((Jogo*)v[i])->getPlataforma().find(n) != string::npos )
-                v[i]->mostrar();
+            if (((Jogo*)v[i])->getPlataforma().find(n) != string::npos )v[i]->mostrar();
         }
     }
 }
