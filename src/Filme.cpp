@@ -16,10 +16,4 @@ void Filme::ler(){
 string Filme::getClasse(){return "Filme";}
 string Filme::getAtor(){return ator;}
 string Filme::getDiretor(){return diretor;}
-
-double Filme::aluguel(){
-    if ( getAno() < 2020 )
-        return 5.00;
-    else if ( getAno() >= 2020 )
-        return 7.00;
-}
+double Filme::aluguel(){return getAno() <2020?5:7;}
